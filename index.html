@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Vector Arcade</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        background: #000;
+        color: #00ff00;
+        font-family: 'Courier New', monospace;
+        overflow: hidden;
+      }
+      
+      #status-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: #111;
+        border-bottom: 2px solid #00ff00;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        z-index: 100;
+        font-size: 16px;
+        text-shadow: 0 0 5px #00ff00;
+      }
+      
+      #game-canvas {
+        position: fixed;
+        top: 40px;
+        left: 0;
+        background: #000;
+        cursor: none;
+      }
+      
+      .status-item {
+        display: flex;
+        gap: 20px;
+      }
+      
+      .glow {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+      }
+      
+      #lives-display {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      
+      #life-indicators {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        align-items: center;
+      }
+      
+      .life-ship {
+        width: 14px;
+        height: 14px;
+        position: relative;
+      }
+      
+      .life-ship svg {
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(0 0 3px #00ff00);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="status-bar">
+      <div class="status-item">
+        <span>SCORE: <span id="score" class="glow">0</span></span>
+        <span>HIGH: <span id="high-score" class="glow">0</span></span>
+      </div>
+      <div class="status-item">
+        <div id="lives-display">
+          <span>LIVES:</span>
+          <div id="life-indicators"></div>
+        </div>
+      </div>
+      <div class="status-item">
+        <span>LEVEL: <span id="level" class="glow">1</span></span>
+        <span id="game-status" class="glow">READY</span>
+      </div>
+    </div>
+    <canvas id="game-canvas"></canvas>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
