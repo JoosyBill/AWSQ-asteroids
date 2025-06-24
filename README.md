@@ -167,11 +167,11 @@ retro-arcade/
 - [ ] **Particle Effects**: Explosion animations, thrust trails
 - [ ] **Screen Shake**: Impact feedback for collisions
 - [ ] **Color Variations**: Different colors for enemy types
-- [ ] **Background Elements**: Starfield, nebulae, grid patterns
+- [X] **Background Elements**: Starfield, nebulae, grid patterns
 
 ### 🏆 Game Features
-- [ ] **High Score System**: Local storage persistence
-- [ ] **Multiple Lives Display**: Visual life indicators
+- [X] **High Score System**: Local storage persistence
+- [X] **Multiple Lives Display**: Visual life indicators
 - [ ] **Combo System**: Score multipliers for consecutive hits
 - [ ] **Time Challenges**: Speed run modes
 
